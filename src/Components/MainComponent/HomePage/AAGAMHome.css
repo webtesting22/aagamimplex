@@ -1,0 +1,85 @@
+.AnimatedImagesComponent {
+    height: 800vh;
+}
+
+.RowWiseImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.RowWiseImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.RowWiseImage>div {
+    height: 75vh;
+    width: 100%;
+    overflow: hidden;
+    /* transition: all 1s ease-in-out; */
+
+}
+
+.RowWiseImage>div:nth-child(1) {
+    margin-top: -15rem;
+    height: 50vh;
+}
+
+.RowWiseImage>div:nth-child(2) {
+    margin: 0px 10px;
+    margin-top: 2rem !important;
+    width: 70%;
+}
+
+.RowWiseImage>div:nth-child(3) {
+    margin-top: -15rem;
+    height: 50vh;
+}
+
+.ParallaxImage {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+    transition: transform 0.1s linear;
+}
+
+.ParallaxImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headingContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headingContainer h1 {
+    text-align: center;
+    width: 50%;
+    font-family: "Gilda Display", serif;
+    font-size: 40px;
+    position: sticky;
+    top: 20%;
+    margin-bottom: 7rem;
+}
+
+.HeadingImages img {
+    width: 300px !important;
+}
+
+.FleXCoulumn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}

@@ -1,0 +1,32 @@
+.LogoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LogoContainer img {
+    width: 120px;
+    background: white;
+    border-radius: 10px;
+}
+
+#MegaNavigationContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#MegaNavigationContainer>div {
+    width: 100%;
+}
+
+.NavigationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.NavigationContainer a {
+    text-decoration: none;
+    margin: 0px 20px;
+}
