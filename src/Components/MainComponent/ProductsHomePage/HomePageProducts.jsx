@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./HomePageProducts.css"
 import Marquee from "react-fast-marquee";
+import { Row, Col } from "antd";
+import ProductData from "./ProductData";
 const HomePageProducts = () => {
-   
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
+    const handleMouseEnter = (index) => {
+        setHoveredIndex(index);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredIndex(null);
+    };
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % CarousalImages.length);
@@ -38,16 +48,16 @@ const HomePageProducts = () => {
 
                     </div>
                     <div className="AnimatedPhotosBlink">
-                    <div className="carousel-images-container">
-                    {CarousalImages.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`carousel-image ${currentImageIndex === index ? "active" : ""}`}
-                        >
-                            <img src={item} alt={`carousel-image-${index}`} />
+                        <div className="carousel-images-container">
+                            {CarousalImages.map((item, index) => (
+                                <div
+                                    key={index}
+                                    className={`carousel-image ${currentImageIndex === index ? "active" : ""}`}
+                                >
+                                    <img src={item} alt="aagam implex" />
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
                     </div>
                     <Marquee>
                         {productItems.map((item, index) => (
@@ -55,8 +65,38 @@ const HomePageProducts = () => {
                         ))}
                     </Marquee>
                 </div>
+                <div className="paddingTop">
+                    <div className="productsHeading">
+                        <h1> Tabs Container</h1>
+                    </div>
+                    <div className="BestSellingProducts">
+                        <div className="ProductData">
+                            <Row>
+                                {ProductData.map((item, index) => (
+                                    <Col lg={6} md={8} key={index}>
+                                        <div className="ProductCard" onMouseEnter={() => handleMouseEnter(index)}
+                                            onMouseLeave={handleMouseLeave}>
+                                            <div className="ImageContainer">
+                                                <img
+                                                    src={hoveredIndex === index ? item.image[1] : item.image[0]}
+                                                    alt="aagam implex"
+                                                    className="ProductImage"
+                                                    style={{transition:".5s"}}
+                                                />
+                                            </div>
+                                            <div className="ContentContainer">
+                                                <h4>{item.title}</h4>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                ))}
+
+                            </Row>
+                        </div>
+                    </div>
+                </div>
             </section>
-            
+
         </>
     )
 }

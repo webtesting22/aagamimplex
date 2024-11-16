@@ -1,4 +1,3 @@
-
 .BackImageAnimation {
     height: 80vh;
     width: 100%;
@@ -48,11 +47,13 @@ justify-content: center; */
         transform: translateX(-100%);
     }
 }
-.rfm-child span{
+
+.rfm-child span {
     font-family: "Caveat", cursive;
     font-size: 5rem;
 }
-.blackoverlay{
+
+.blackoverlay {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -60,14 +61,16 @@ justify-content: center; */
     top: 0px;
     background-color: #00000094;
 }
+
 .carousel-images-container {
     position: relative;
     width: 300px;
-    height: 400px; /* Adjust as needed */
+    height: 400px;
+    /* Adjust as needed */
     overflow: hidden;
-  }
-  
-  .carousel-image {
+}
+
+.carousel-image {
     position: absolute;
     /* top: 0; */
     left: 0;
@@ -75,21 +78,22 @@ justify-content: center; */
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-  }
-  
-  .carousel-image img {
+}
+
+.carousel-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-  }
-  
-  .carousel-image.active {
-    opacity: 1;
-  }
-  
 
-  .AnimatedPhotosBlink{
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+
+.AnimatedPhotosBlink {
     width: 100%;
     position: absolute;
     height: 100%;
@@ -97,4 +101,55 @@ justify-content: center; */
     align-items: center;
     justify-content: center;
     z-index: 5;
-  }
+}
+
+.productsHeading {
+    display: flex;
+    justify-content: center;
+}
+
+.productsHeading h1 {
+    text-align: center;
+    width: 50%;
+    font-family: "Gilda Display", serif;
+    font-size: 40px;
+    position: sticky;
+    top: 20%;
+}
+
+.ProductCard {
+    padding: 20px;
+}
+
+.ProductCard .ImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProductCard .ImageContainer {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ProductCard:hover .ContentContainer {
+    background-color: transparent;
+    transition: .5s;
+}
+
+.BestSellingProducts {
+    padding: 0rem 2rem;
+}
+
+.ContentContainer {
+    padding: 15px 0px;
+    background-color: rgb(173, 149, 81);
+    transition: .5s;
+}
+
+.ContentContainer h4 {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px 20px;
+}
