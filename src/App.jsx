@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import MegaNavigation from './Components/OtherComponents/Navigation/MegaNavigation'
 import AAGAMHome from './Components/MainComponent/HomePage/AAGAMHomePage'
+import HomePageProducts from './Components/MainComponent/ProductsHomePage/HomePageProducts'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
       <MegaNavigation />
       <AAGAMHome/>
+      <HomePageProducts/>
     </>
   )
 }

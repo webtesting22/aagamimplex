@@ -1,0 +1,100 @@
+
+.BackImageAnimation {
+    height: 80vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1564594995086-b32b7c7f4cd6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    /* display: flex;
+    align-items: center;
+justify-content: center; */
+}
+
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+    /* Optional background color */
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-left 40s linear infinite;
+    /* width: 100%; */
+}
+
+.marquee-item {
+    font-size: 18px;
+    /* Adjust font size */
+    color: #333;
+    /* Adjust text color */
+    font-weight: bold;
+    /* Adjust font weight */
+}
+
+/* Keyframes for scrolling from right to left */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.rfm-child span{
+    font-family: "Caveat", cursive;
+    font-size: 5rem;
+}
+.blackoverlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #00000094;
+}
+.carousel-images-container {
+    position: relative;
+    width: 300px;
+    height: 500px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .carousel-image.active {
+    opacity: 1;
+  }
+  
+
+  .AnimatedPhotosBlink{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
